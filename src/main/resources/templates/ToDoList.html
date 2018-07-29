@@ -5,30 +5,40 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">To Do it easier</a>
         </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Welcome  [[${#httpServletRequest.remoteUser}]]</a></li>
-            <li><a href="#">Help us</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About-us <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Write us</a></li>
-                </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Welcome [[${#httpServletRequest.remoteUser}]]</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Log out</a>
             </li>
         </ul>
     </div>
 </nav>
+
+
+<div class="container">
+    <h2>First steps</h2>
+    <p><strong>Create new task: </strong>So just click on green tab and we will start</p>
+    <div class="card-columns">
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <p class="card-text"><a th:href="@{/CreateTaskPage.html}" th:style="'color:white'">Create new Task</a></p>
+            </div>
+    </div>
+</div>
 
 </body>
 </html>
