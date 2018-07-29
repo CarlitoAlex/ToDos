@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">To Do it easier</a>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Welcome [[${#httpServletRequest.remoteUser}]]</a>
+            </li>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-danger" type="submit">Sign Out</button>
+            </form>
+        </ul>
+    </div>
+</nav>
+
+<div class="panel-body">
+    <form th:action="@{/CreateNewTask}" method="post">
+        <div class="form-group">
+            <input id="title" class="form-control" type="text" name="title" placeholder="Title"/></div>
+        <div class="form-group">
+            <input id="description" class="form-control" type="text" name="description" placeholder="description"/></div>
+        <div class="form-group">
+            <input id="status" class="form-control" type="text" name="status" placeholder="status"/></div>
+        <input class="btn btn-lg btn-success btn-block" type="submit" value="Create task">
+    </form>
+</div>
 
 </body>
 </html>
