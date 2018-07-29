@@ -35,6 +35,16 @@ public class User implements UserDetails{
 
     private String activationCode;
 
+    private Long points;
+
+    public Long getPoints() {
+        return points;
+    }
+
+    public void setPoints(Long points) {
+        this.points = points;
+    }
+
     public User() {
     }
 

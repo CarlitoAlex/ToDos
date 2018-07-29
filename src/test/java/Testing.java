@@ -1,6 +1,7 @@
 import com.todomy.example.Application;
 import com.todomy.example.model.Category;
 import com.todomy.example.model.Task;
+import com.todomy.example.model.User;
 import com.todomy.example.repo.TaskRepo;
 import com.todomy.example.repo.UserRepo;
 import com.todomy.example.service.TaskService;
@@ -44,7 +45,12 @@ public class Testing {
 
     @Test
     public void test2(){
-        String name = userRepo.findByUsername("carlitoAlex716").getUsername();
-        System.out.println(name);
+        User owner = userRepo.findByUsername("carlitoAlex716");
+
+        Long result = taskRepo.countByOwner(owner);
+
+        owner.setPoints(result);
+
+        userRepo.save(owner);
     }
 }

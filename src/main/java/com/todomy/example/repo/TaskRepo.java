@@ -1,6 +1,7 @@
 package com.todomy.example.repo;
 
 import com.todomy.example.model.Task;
+import com.todomy.example.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.transaction.Transactional;
@@ -15,4 +16,6 @@ public interface TaskRepo extends JpaRepository<Task, UUID> {
     Task findFirstByTitle(String title);
 
     Task findByStatus(String status);
+
+    Long countByOwner(User owner);
 }

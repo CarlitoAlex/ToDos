@@ -1,6 +1,7 @@
 package com.todomy.example.controller;
 
 import com.todomy.example.repo.TaskRepo;
+import com.todomy.example.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +17,4 @@ public class MyTasksController {
         model.addAttribute("tasks" , taskRepo.findAll());
         return "myTaskPage";
     }
-
-
-
 }
