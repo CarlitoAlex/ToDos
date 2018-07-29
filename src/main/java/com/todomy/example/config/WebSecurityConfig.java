@@ -34,9 +34,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         http
                 .authorizeRequests()
                 .antMatchers("/", "/mainPage").permitAll()
+                .antMatchers( "/ToDoList").authenticated()
                 .and()
                 .csrf().disable()
                 .formLogin()
+                .defaultSuccessUrl("/ToDoList",true)
                 .loginPage("/login")
                 .permitAll()
                 .and()
