@@ -42,7 +42,7 @@ public class UserService implements UserDetailsService{
         String message = String.format(
                 "Hello, %s! \n" +
                         "Welcome to VRadiuse!\n" +
-                        "Please, visit next link: http://localhost:8082/activate/%s",
+                        "Please, visit next link: http://localhost:8081/activate/%s",
                 user.getUsername(),
                 user.getActivationCode()
         );

@@ -34,6 +34,7 @@
             <input id="description" class="form-control" type="text" name="description" placeholder="description"/></div>
         <div class="form-group">
             <input id="status" class="form-control" type="text" name="status" placeholder="status"/></div>
+        <input id="username" class="form-control" type="hidden" name="username" th:value="${#httpServletRequest.remoteUser}"/>
         <input class="btn btn-lg btn-success btn-block" type="submit" value="Create task">
     </form>
 </div>

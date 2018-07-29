@@ -17,18 +17,30 @@ public class Task {
     @Column(name = "TASK_ID", nullable = false, updatable = false)
     private UUID taskId;
 
-    private String title;
-    private String description;
-    private String status;
-    private Timestamp created;
-
     @ElementCollection(targetClass = Category.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "task_category", joinColumns = @JoinColumn(name = "task_id"))
     @Enumerated(EnumType.STRING)
     private Set<Task> categories;
-
     public Task() {
     }
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "OWNER_ID")
+    private User owner;
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    private String title;
+    private String description;
+    private String status;
+    private Timestamp created;
+    private Timestamp expired;
 
     public UUID getTaskId() {
         return taskId;
@@ -37,6 +49,8 @@ public class Task {
     public void setTaskId(UUID taskId) {
         this.taskId = taskId;
     }
+
+
 
     public String getTitle() {
         return title;
@@ -68,6 +82,14 @@ public class Task {
 
     public void setCreated(Timestamp created) {
         this.created = created;
+    }
+
+    public Timestamp getExpired() {
+        return expired;
+    }
+
+    public void setExpired(Timestamp expired) {
+        this.expired = expired;
     }
 
     public Set<Task> getCategories() {

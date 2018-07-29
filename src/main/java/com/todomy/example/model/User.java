@@ -35,6 +35,8 @@ public class User implements UserDetails{
 
     private String activationCode;
 
+    public User() {
+    }
 
     public UUID getId() {
         return userId;

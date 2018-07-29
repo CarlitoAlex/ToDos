@@ -2,6 +2,7 @@ import com.todomy.example.Application;
 import com.todomy.example.model.Category;
 import com.todomy.example.model.Task;
 import com.todomy.example.repo.TaskRepo;
+import com.todomy.example.repo.UserRepo;
 import com.todomy.example.service.TaskService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -19,6 +20,8 @@ import java.util.UUID;
 @SpringBootTest(classes = Application.class)
 public class Testing {
 
+    @Autowired
+    private UserRepo userRepo;
 
     @Autowired
     private TaskRepo taskRepo;
@@ -37,5 +40,11 @@ public class Testing {
         String title = taskRepo.findFirstByTitle("Hollo").getTitle();
         Assert.assertEquals(title, task.getTitle());
         taskService.deleteTask(task.getTaskId());
+    }
+
+    @Test
+    public void test2(){
+        String name = userRepo.findByUsername("carlitoAlex716").getUsername();
+        System.out.println(name);
     }
 }
