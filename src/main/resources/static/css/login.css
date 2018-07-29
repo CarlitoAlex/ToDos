@@ -1,0 +1,11 @@
+#login {
+    background: url("../images/loginform_login.png") no-repeat 4px 4px;
+    background-size: 28px;
+    padding-left: 35px;
+}
+
+#password {
+    background: url("../images/loginform_password.png") no-repeat 4px 4px;
+    background-size: 28px;
+    padding-left: 34px;
+}

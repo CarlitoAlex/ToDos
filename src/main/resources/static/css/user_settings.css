@@ -1,0 +1,204 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+
+}
+
+#header {
+    height: 60px;
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: inherit;
+
+}
+
+#main_label {
+    font: 20pt sans-serif;
+    color: black;
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 15px;
+
+}
+
+#content {
+    margin-top: 5px;
+    background-color: #e5e5e5;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#first_li {
+    background-color: #e5e5e5;
+    box-shadow: 0 0 8px 0;
+    width: 100%;
+    border-radius: 0px 180px 180px 0px;
+    padding: 8px;
+
+}
+
+#pic_ava {
+    width: 120px;
+    height: 130px;
+    border-radius: 180px 180px 180px 180px;
+}
+
+#pic_new_ava {
+    width: 120px;
+    height: 130px;
+    border-radius: 180px 180px 180px 180px;
+}
+
+#edit_pic_btn {
+
+    margin-left: 5px;
+    padding-left: 7px;
+    padding-top: 6px;
+    padding-bottom: 25px;
+    background-color: #299ae4;
+    color: #ebebeb;
+    font-size: 10pt;
+    height: 20px;
+    width: 75px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 8px 0 #1e90ff;
+
+}
+
+#edit_name_btn {
+    background-color: #299ae4;
+    color: #ebebeb;
+    font-size: 10pt;
+    height: 20px;
+    width: 75px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 8px 0 #1e90ff;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 25px;
+
+}
+
+#nick_name_input {
+    display: block;
+    font-size: 20pt;
+    font-weight: bold;
+    background-color: #e5e5e5;
+    width: 80%;
+
+}
+
+.btn {
+    background-color: #299ae4;
+    color: #ebebeb;
+    font-size: 10pt;
+    height: 20px;
+    width: 150px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 8px 0 #1e90ff;
+    padding-right: 40px;
+    height: 40px;
+}
+
+
+#cancel_pass {
+
+    border-radius: 25px 25px 25px 25px;
+    width: 150px;
+
+}
+
+#save_pass {
+    border-radius: 25px 25px 25px 25px;
+    width: 150px;
+    position: relative;
+
+}
+
+#btn_container {
+    padding-top: 10px;
+    padding-left: 59%;
+}
+
+.modal-header {
+    background-color: #7386d5
+}
+
+.modal-footer {
+    background-color: #7386d5
+}
+
+.modal_input:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+
+}
+
+#content {
+    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container * {
+    box-sizing: border-box;
+}
+
+.flex-outer {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-outer li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-outer > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+    padding: 8px;
+    font-weight: 300;
+
+}
+
+.flex-outer > li > label {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-outer > li > label + * {
+    flex: 1 0 220px;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+    padding: 6px;
+    border: none;
+}
+
+
