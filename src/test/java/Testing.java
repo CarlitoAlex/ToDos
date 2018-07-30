@@ -43,14 +43,4 @@ public class Testing {
         taskService.deleteTask(task.getTaskId());
     }
 
-    @Test
-    public void test2(){
-        User owner = userRepo.findByUsername("carlitoAlex716");
-
-        Long result = taskRepo.countByOwner(owner);
-
-        owner.setPoints(result);
-
-        userRepo.save(owner);
-    }
 }
