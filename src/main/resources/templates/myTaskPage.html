@@ -24,13 +24,19 @@
             <form th:action="@{/logout}" method="post">
                 <button class="btn btn-danger" type="submit">Sign Out</button>
             </form>
+
+            <form th:action="@{/checkPoints}" method="post">
+                <input id="username" class="form-control" type="hidden" name="username"
+                       th:value="${#httpServletRequest.remoteUser}"/>
+                <button class="btn btn-success" type="submit">Get point</button>
+            </form>
         </ul>
     </div>
 </nav>
 
 <div class="container">
-    <h2>First steps</h2>
-    <p><strong>Create new task: </strong>So just click on green tab and we will start</p>
+    <h2>Your points</h2>
+    <p><strong>All point</strong></p>
     <div class="card-columns">
         <div class="card bg-success">
             <div class="card-body text-center">
